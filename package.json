@@ -1,0 +1,30 @@
+{
+  "name": "node-express-redis-simple-todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supanniga/node-express-redis-simple-todolist.git"
+  },
+  "keywords": [],
+  "author": "Supanniga Ogasawara <spng.oga@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supanniga/node-express-redis-simple-todolist/issues"
+  },
+  "homepage": "https://github.com/supanniga/node-express-redis-simple-todolist#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

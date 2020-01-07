@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Simple To-do List</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">To-do List</h1>
+    <div class="card" style="width: 50rem;margin: auto;padding: 1rem;">
+        <div class="card-body">
+            <form method="post" action="/task/add">
+                <div class="form-group">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Add Task" name="newtask">
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br />
+    <div class="card" style="width: 50rem;margin: auto;padding: 1rem;">
+        <form method="post" action="/task/clear">
+            <div class="form-group ">
+                <div class="input-group input-group-lg float-right">
+                    <button class="btn btn-warning " type="submit" id="button-addon2">Clear All Tasks</button>
+                </div>
+            </div>
+        </form>
+        <div class="card-body">
+            <ul class="list-group">
+                <% for (var i = 0; i < len;  i++ ) { %>
+                <li class="list-group-item">
+                    <%= Object.values(tasks)[i] %>
+                    <span>
+                        <a href="/task/delete/<%= Object.keys(tasks)[i] %>" title="Delete">
+                            <button type="button" class="btn btn-danger float-right">Delete</button>
+                        </a>
+                    </span>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
